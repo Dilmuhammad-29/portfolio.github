@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xizmatlar</title>
+
+    <link rel="shortcut icon" href="../imgs/logo.svg" type="image/x-icon">
+
+    <!-- link style -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- responsive link -->
+    <link rel="stylesheet" href="../responsive/mobile.css">
+
+    <!-- fontlar ulandi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script>
+        let localSTheme = localStorage.getItem('theme');
+        let themeToSet = localSTheme;
+
+        if (!localSTheme) {
+            themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        document.documentElement.setAttribute('data-theme', themeToSet);
+    </script>
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="pre"></div>
+    </div>
+
+    <!-- info-xizmatlar bo'limi -->
+
+    <!-- shu teg uchun berilgan sylelarni bilish uchun scssdan "info2" deb qidiring  -->
+    <div class="xizmatlar-2">
+        <!-- ***___________________________________________*** -->
+        <div class="b1">
+
+            <!-- info-xizmatlar bo'limi asosiy matinlar -->
+
+            <div class="menu-x">
+                <a class="a1" href="../index.html">Bosh sahifa</a>
+                <img src="../imgs/arrow-right.svg" alt="">
+                <a href="info-xizmatlar.html">Xizmatlar</a>
+            </div>
+            <div class="menu-w">
+                <div class="sizuchun">
+                    Biz siz uchun
+                </div>
+                <div class="siz-2">
+                    Uylarni tozalash xizmatini <br>
+                    taklif qilamiz
+                </div>
+                <div class="siz-3">
+                    Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng
+                    ko'lamli xizmatlarni taqdim etamiz  .
+                </div>
+                <button class="siz-btn contact"><a href="#">Buyurtma qilish</a></button>
+            </div>
+
+            <!--***______________________________***-->
+
+        </div>
+
+        <!-- info-xizmatlar bo'limi asosiy video -->
+
+        <div class="b2">
+            <div class="video-youtube">
+                <!-- <iframe src="https://www.youtube.com/embed/GkTrrDJ9wZE"
+                    title="OFFICE CLEANING TRAINING VIDEO" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe> -->
+                <div class="video"></div>
+            </div>
+        </div>
+
+        <div class="b3-for-resposive">
+            <div class="sizuchun">
+                Biz siz uchun
+            </div>
+            <div class="siz-2">
+                Uylarni tozalash xizmatini <br>
+                taklif qilamiz
+            </div>
+            <div class="siz-3">
+                Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng 
+                ko'lamli xizmatlarni taqdim etamiz  .
+            </div>
+            <button class="siz-btn contact"><a href="#">Buyurtma qilish</a></button>
+        </div>
+
+        <!--***________________________________***-->
+    </div>
+    <!--***_________________________________***-->
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

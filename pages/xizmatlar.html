@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xizmatlar</title>
+
+    <link rel="shortcut icon" href="../imgs/logo.svg" type="image/x-icon">
+
+    <!-- link style -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive/mobile.css">
+
+    <!-- responsive link -->
+    <link rel="stylesheet" href="../responsive/mobile.css">
+
+    <!-- fontlar ulandi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script>
+        let localSTheme = localStorage.getItem('theme');
+        let themeToSet = localSTheme;
+
+        if (!localSTheme) {
+            themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        document.documentElement.setAttribute('data-theme', themeToSet);
+    </script>
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="pre"></div>
+    </div>
+
+    <div class="xizmatlar">
+        <div class="top">
+            <h2>Siz uchun</h2>
+            <h1>Qanday tozalash xizmatlar taklif<br> qilamiz</h1>
+            <p>Biz sizning uyingiz, ofisingiz tozaligi va farovonligi uchun quyidagi xizmatlarni taklif qilamiz</p>
+        </div>
+        <div class="center">
+            <div class="left">
+                <ul>
+                    <li data-filter="Barchasi">Barchasi</li>
+                    <li data-filter="Tozalash">Tozalash</li>
+                    <li data-filter="Dizinfeksiya">Dizinfeksiya</li>
+                    <li data-filter="Yuvish">Yuvish</li>
+                    <li data-filter="Oshxona">Oshxona</li>
+                    <li data-filter="Uy va ofis">Uy va ofis</li>
+                    <li data-filter="Bog' va yashil maydonlar">Bog' va yashil maydonlar</li>
+                </ul>
+                <select name="filter" id="filter">
+                    <option value="Barchasi">Barchasi</option>
+                    <option value="Tozalash">Tozalash</option>
+                    <option value="Dizinfeksiya">Dizinfeksiya</option>
+                    <option value="Yuvish">Yuvish</option>
+                    <option value="Oshxona">Oshxona</option>
+                    <option value="Uy va ofis">Uy va ofis</option>
+                    <option value="Bog' va yashil maydonlar">Bog' va yashil maydonlar</option>
+                </select>
+            </div>
+            <div class="right">
+                <img src="../imgs/search-normal.png" alt="search img">
+                <input type="text" placeholder="Qidirish" class="xizmatlar-search">
+            </div>
+        </div>
+        <div class="xizmatlar-bottom">
+            <div class="card" data-category="Tozalash"><img src="../imgs/clean-ser.png"
+                    alt="Uylarni tozalash"><span>Tozalash</span>
+                <h2>Uylarni tozalash</h2>
+                <p>Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng ko'lamli xizmatlarni taqdim
+                    etamiz.</p><a href="#">Batafsil</a>
+            </div>
+            <div class="card" data-category="Dizinfeksiya"><img src="../imgs/desinfeksiya-ser.png"
+                    alt="Ofislarni tozalash"><span>Dizinfeksiya</span>
+                <h2>Ofislarni tozalash</h2>
+                <p>Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng ko'lamli xizmatlarni taqdim
+                    etamiz.</p><a href="#">Batafsil</a>
+            </div>
+            <div class="card" data-category="Yuvish"><img src="../imgs/desinfeksiya-ser.png"
+                    alt="Bog'larni tozalash"><span>Yuvish</span>
+                <h2>Bog'larni tozalash</h2>
+                <p>Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng ko'lamli xizmatlarni taqdim
+                    etamiz.</p><a href="#">Batafsil</a>
+            </div>
+            <div class="card" data-category="Oshxona"><img src="../imgs/washing-ser.png"
+                    alt="Yashil maydonlarni tozalash"><span>Oshxona</span>
+                <h2>Yashil maydonlarni tozalash</h2>
+                <p>Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng ko'lamli xizmatlarni taqdim
+                    etamiz.</p><a href="#">Batafsil</a>
+            </div>
+            <div class="card" data-category="Uy va ofis"><img src="../imgs/clean-ser.png"
+                    alt="Qurilish joylarini tozalash"><span>Uy va
+                    ofis</span>
+                <h2>Qurilish joylarini tozalash</h2>
+                <p>Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng ko'lamli xizmatlarni taqdim
+                    etamiz.</p><a href="#">Batafsil</a>
+            </div>
+            <div class="card" data-category="Bog' va yashil maydonlar"><img src="../imgs/desinfeksiya-ser.png"
+                    alt="Umumiy tozalash"><span>Bog' va yashil
+                    maydonlar</span>
+                <h2>Umumiy tozalash</h2>
+                <p>Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng ko'lamli xizmatlarni taqdim
+                    etamiz.</p><a href="#">Batafsil</a>
+            </div>
+            <div class="card" data-category="Bog' va yashil maydonlar"><img src="../imgs/desinfeksiya-ser.png"
+                    alt="Mebellarni tozalash"><span>Bog' va yashil
+                    maydonlar</span>
+                <h2>Mebellarni tozalash</h2>
+                <p>Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng ko'lamli xizmatlarni taqdim
+                    etamiz.</p><a href="#">Batafsil</a>
+            </div>
+            <div class="card" data-category="Bog' va yashil maydonlar"><img src="../imgs/desinfeksiya-ser.png"
+                    alt="Mebellarni tozalash"><span>Bog' va yashil
+                    maydonlar</span>
+                <h2>Mebellarni tozalash</h2>
+                <p>Biz sizning uyingiz va ofisingiz tozaligi va farovonligi uchun keng ko'lamli xizmatlarni taqdim
+                    etamiz.</p><a href="#">Batafsil</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Xizmatlar coding end -->
+
+    <script src="../script.js"></script>
+    <script>
+        // Your first section of code for listItems styling
+        const listItemsStyling = document.querySelectorAll('.center .left li');
+
+        listItemsStyling[0].style.backgroundColor = 'var(--green)';
+        listItemsStyling[0].style.color = 'white';
+        listItemsStyling[0].style.lineHeight = '24px';
+        listItemsStyling[0].style.fontWeight = '700';
+        listItemsStyling.forEach(item => {
+            item.addEventListener('click', function () {
+                listItemsStyling.forEach(li => {
+                    li.style.backgroundColor = '';
+                    li.style.color = '';
+                    li.style.fontWeight = '500';
+                });
+
+                this.style.backgroundColor = 'var(--green)';
+                this.style.color = 'white';
+                this.style.lineHeight = '24px';
+                this.style.fontWeight = '700';
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Your existing code for listItems styling
+
+            const listItems = document.querySelectorAll('.center .left li');
+            const cards = document.querySelectorAll('.xizmatlar-bottom .card');
+            const selectFilter = document.getElementById('filter');
+
+            // Function to filter cards based on the selected category
+            function filterCards(category) {
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (category === 'Barchasi' || category === cardCategory) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // Event listener for list items
+            listItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    listItems.forEach(li => {
+                        li.classList.remove('active');
+                    });
+
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-filter');
+                    filterCards(category);
+                });
+            });
+
+            // Event listener for select element
+            selectFilter.addEventListener('change', function () {
+                const selectedCategory = this.value;
+                filterCards(selectedCategory);
+            });
+
+            // Your existing code for the search functionality
+            const searchInput = document.querySelector(".xizmatlar-search");
+
+            searchInput.addEventListener("input", function () {
+                const query = this.value.trim().toLowerCase();
+
+                cards.forEach(card => {
+                    const cardTitle = card.querySelector('h2').textContent.toLowerCase();
+                    if (cardTitle.includes(query)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
+
+</script>
+
+</html>
